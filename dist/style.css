@@ -1,0 +1,96 @@
+@font-face {
+  font-family: HFNSS;
+  src: url("./assets/fonts/hfnss.ttf");
+}
+@font-face {
+  font-family: HFNSS1;
+  src: url("./assets/fonts/HFNSSvector1.ttf");
+}
+@font-face {
+  font-family: HFGAM;
+  src: url("./assets/fonts/hfgam.ttf");
+}
+@font-face {
+  font-family: HFTIN;
+  src: url("./assets/fonts/hftin.ttf");
+}
+body {
+  background: #030907;
+  padding: 0;
+  margin: 0;
+}
+p {
+  color: #b0a69a;
+  font-family: HFNSS;
+  font-size: 4em;
+  -webkit-font-smoothing: none;
+  margin: 0;
+  padding: 0;
+}
+.main {
+  width: 1200px;
+  margin: 0 auto;
+}
+.blue-bar {
+  height: 50px;
+  border-bottom: 4px solid #175cfe;
+}
+.point {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+.song-text {
+  font-size: 2em;
+}
+.songs {
+  padding-top: 25px;
+  height: 100vh;
+}
+.song {
+  position: relative;
+  height: 25px;
+  border-bottom: 2px solid #57524f;
+  border-top: 2px solid #57524f;
+  margin-bottom: -2px;
+}
+.song.playing {
+  background: #06120e;
+}
+.song.playing p {
+  color: #e0d6ca;
+}
+.song.first-row {
+  border-top: none;
+  height: 25px;
+}
+.song.first-row p {
+  color: #57524f;
+}
+.song div {
+  padding: 4px;
+}
+.song:hover {
+  background: #06120e;
+  cursor: pointer;
+}
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 630px;
+  height: 19px;
+  border-right: 2px solid #57524f;
+}
+.description {
+  position: absolute;
+  top: 0;
+  left: 650;
+  width: 255px;
+  height: 19px;
+  border-right: 2px solid #57524f;
+}
+.artist {
+  position: absolute;
+  top: 0;
+  left: 925;
+}
