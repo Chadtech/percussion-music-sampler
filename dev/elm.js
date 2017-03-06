@@ -4165,7 +4165,88 @@ var _Chadtech$elm_gulp_browserify_boilerplate$Init$sampler0Songs = {
 									'Gamelan, Trumpet',
 									'Lou Harrison',
 									_Chadtech$elm_gulp_browserify_boilerplate$Init$root('bubaran-robert.m4a')),
-								_1: {ctor: '[]'}
+								_1: {
+									ctor: '::',
+									_0: A4(
+										_Chadtech$elm_gulp_browserify_boilerplate$Types$Song,
+										'Prep Gwarlek 3b',
+										'Prepared Piano',
+										'Aphex Twin',
+										_Chadtech$elm_gulp_browserify_boilerplate$Init$root('prep-gwarlek-3b.mp3')),
+									_1: {
+										ctor: '::',
+										_0: A4(
+											_Chadtech$elm_gulp_browserify_boilerplate$Types$Song,
+											'Puspa Wresti',
+											'Gamelan',
+											'Sekka Ging Bina Rema..',
+											_Chadtech$elm_gulp_browserify_boilerplate$Init$root('puspa-wresti.m4a')),
+										_1: {
+											ctor: '::',
+											_0: A4(
+												_Chadtech$elm_gulp_browserify_boilerplate$Types$Song,
+												'DISKPREPT4',
+												'Prepared Piano',
+												'Aphex Twin',
+												_Chadtech$elm_gulp_browserify_boilerplate$Init$root('diskprept4.m4a')),
+											_1: {
+												ctor: '::',
+												_0: A4(
+													_Chadtech$elm_gulp_browserify_boilerplate$Types$Song,
+													'Totem Ancestor',
+													'Prepared Piano',
+													'John Cage',
+													_Chadtech$elm_gulp_browserify_boilerplate$Init$root('totem-ancestor.m4a')),
+												_1: {
+													ctor: '::',
+													_0: A4(
+														_Chadtech$elm_gulp_browserify_boilerplate$Types$Song,
+														'The Perilous Night Part 4',
+														'Prepared Piano',
+														'John Cage',
+														_Chadtech$elm_gulp_browserify_boilerplate$Init$root('the-perilous-night-4.m4a')),
+													_1: {
+														ctor: '::',
+														_0: A4(
+															_Chadtech$elm_gulp_browserify_boilerplate$Types$Song,
+															'Bacchanale',
+															'Prepared Piano',
+															'John Cage',
+															_Chadtech$elm_gulp_browserify_boilerplate$Init$root('bacchanale.m4a')),
+														_1: {
+															ctor: '::',
+															_0: A4(
+																_Chadtech$elm_gulp_browserify_boilerplate$Types$Song,
+																'The Unavailable memory of',
+																'Prepared Piano',
+																'John Cage',
+																_Chadtech$elm_gulp_browserify_boilerplate$Init$root('the-unavailable-memory-of.m4a')),
+															_1: {
+																ctor: '::',
+																_0: A4(
+																	_Chadtech$elm_gulp_browserify_boilerplate$Types$Song,
+																	'Beskhu3epnm',
+																	'Prepared Piano',
+																	'Aphex Twin',
+																	_Chadtech$elm_gulp_browserify_boilerplate$Init$root('beskhu3epnm.mp3')),
+																_1: {
+																	ctor: '::',
+																	_0: A4(
+																		_Chadtech$elm_gulp_browserify_boilerplate$Types$Song,
+																		'Batel',
+																		'Gamelan',
+																		'???',
+																		_Chadtech$elm_gulp_browserify_boilerplate$Init$root('batel.m4a')),
+																	_1: {ctor: '[]'}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
 							}
 						}
 					}
@@ -8561,47 +8642,82 @@ var _Chadtech$elm_gulp_browserify_boilerplate$View_Songs$view = function (model)
 		});
 };
 
+var _Chadtech$elm_gulp_browserify_boilerplate$View_Sampler$view = F2(
+	function (title, model) {
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('main'),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('blue-bar'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$p,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('point'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(title),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _Chadtech$elm_gulp_browserify_boilerplate$View_Songs$view(model),
+					_1: {
+						ctor: '::',
+						_0: _Chadtech$elm_gulp_browserify_boilerplate$View_AudioPlayer$view(model),
+						_1: {ctor: '[]'}
+					}
+				}
+			});
+	});
+
+var _Chadtech$elm_gulp_browserify_boilerplate$View_Main$split = F3(
+	function (first, last, _p0) {
+		var _p1 = _p0;
+		var splitSongs = _elm_lang$core$Dict$fromList(
+			A2(
+				_elm_lang$core$List$take,
+				last - first,
+				A2(
+					_elm_lang$core$List$drop,
+					first,
+					_elm_lang$core$Dict$toList(_p1.songs))));
+		return A2(_Chadtech$elm_gulp_browserify_boilerplate$Types$Model, splitSongs, _p1.currentPlay);
+	});
 var _Chadtech$elm_gulp_browserify_boilerplate$View_Main$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class('main'),
-			_1: {ctor: '[]'}
-		},
+		{ctor: '[]'},
 		{
 			ctor: '::',
 			_0: A2(
-				_elm_lang$html$Html$div,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('blue-bar'),
-					_1: {ctor: '[]'}
-				},
-				{
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$p,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('point'),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('Percussion Music Sampler Part 0 : Melodic Percussion'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {ctor: '[]'}
-				}),
+				_Chadtech$elm_gulp_browserify_boilerplate$View_Sampler$view,
+				'Percussion Music Sampler Part 0 : Melodic',
+				A3(_Chadtech$elm_gulp_browserify_boilerplate$View_Main$split, 0, 8, model)),
 			_1: {
 				ctor: '::',
-				_0: _Chadtech$elm_gulp_browserify_boilerplate$View_Songs$view(model),
-				_1: {
-					ctor: '::',
-					_0: _Chadtech$elm_gulp_browserify_boilerplate$View_AudioPlayer$view(model),
-					_1: {ctor: '[]'}
-				}
+				_0: A2(
+					_Chadtech$elm_gulp_browserify_boilerplate$View_Sampler$view,
+					'Percussion Music Sampler Part 1 : Semi-Melodic',
+					A3(_Chadtech$elm_gulp_browserify_boilerplate$View_Main$split, 8, 17, model)),
+				_1: {ctor: '[]'}
 			}
 		});
 };

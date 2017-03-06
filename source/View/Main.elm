@@ -4,8 +4,8 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
 import Types exposing (..)
-import View.AudioPlayer as AudioPlayer
-import View.Songs as Songs
+import View.Sampler as Sampler
+import Dict
 
 
 -- VIEW
@@ -14,13 +14,23 @@ import View.Songs as Songs
 view : Model -> Html Msg
 view model =
     div
-        [ class "main" ]
-        [ div
-            [ class "blue-bar" ]
-            [ p
-                [ class "point" ]
-                [ text "Percussion Music Sampler Part 0 : Melodic Percussion" ]
-            ]
-        , Songs.view model
-        , AudioPlayer.view model
+        []
+        [ Sampler.view
+            "Percussion Music Sampler Part 0 : Melodic"
+            (split 0 8 model)
+        , Sampler.view
+            "Percussion Music Sampler Part 1 : Semi-Melodic"
+            (split 8 17 model)
         ]
+
+
+split : Int -> Int -> Model -> Model
+split first last { songs, currentPlay } =
+    let
+        splitSongs =
+            Dict.toList songs
+                |> List.drop first
+                |> List.take (last - first)
+                |> Dict.fromList
+    in
+        Model splitSongs currentPlay

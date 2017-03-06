@@ -63,4 +63,49 @@ sampler0Songs =
         "Gamelan, Trumpet"
         "Lou Harrison"
         (root "bubaran-robert.m4a")
+    , Song
+        "Prep Gwarlek 3b"
+        "Prepared Piano"
+        "Aphex Twin"
+        (root "prep-gwarlek-3b.mp3")
+    , Song
+        "Puspa Wresti"
+        "Gamelan"
+        "Sekka Ging Bina Rema.."
+        (root "puspa-wresti.m4a")
+    , Song
+        "DISKPREPT4"
+        "Prepared Piano"
+        "Aphex Twin"
+        (root "diskprept4.m4a")
+    , Song
+        "Totem Ancestor"
+        "Prepared Piano"
+        "John Cage"
+        (root "totem-ancestor.m4a")
+    , Song
+        "The Perilous Night Part 4"
+        "Prepared Piano"
+        "John Cage"
+        (root "the-perilous-night-4.m4a")
+    , Song
+        "Bacchanale"
+        "Prepared Piano"
+        "John Cage"
+        (root "bacchanale.m4a")
+    , Song
+        "The Unavailable memory of"
+        "Prepared Piano"
+        "John Cage"
+        (root "the-unavailable-memory-of.m4a")
+    , Song
+        "Beskhu3epnm"
+        "Prepared Piano"
+        "Aphex Twin"
+        (root "beskhu3epnm.mp3")
+    , Song
+        "Batel"
+        "Gamelan"
+        "???"
+        (root "batel.m4a")
     ]
